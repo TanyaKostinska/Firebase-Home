@@ -1,6 +1,7 @@
 import 'package:firebase_home/page/widget/simple_button.dart';
 import 'package:firebase_home/page/widget/simple_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -18,6 +19,7 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Lottie.asset('assets/animation/suprise_box.json'),
             const Text(
               'Registration',
               style: TextStyle(
