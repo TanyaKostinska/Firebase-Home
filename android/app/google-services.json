@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "330417329281",
-    "project_id": "fir-hm-eca2e",
-    "storage_bucket": "fir-hm-eca2e.appspot.com"
+    "project_number": "353161705318",
+    "project_id": "fir-home-9d353",
+    "storage_bucket": "fir-home-9d353.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:330417329281:android:bc8f227f4eba9be0206980",
+        "mobilesdk_app_id": "1:353161705318:android:1811162fbeed3ce7c9faa7",
         "android_client_info": {
           "package_name": "com.example.firebase_home"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBgM8egECzULJ3k-bVS5w7Duo7vhJIaiVM"
+          "current_key": "AIzaSyDUzKnLgIBQ8aMn2Sqy6grqvocAtUSoEsw"
         }
       ],
       "services": {
