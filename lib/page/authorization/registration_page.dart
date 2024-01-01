@@ -13,7 +13,7 @@ class RegistrationPage extends StatelessWidget {
       TextEditingController();
 
   RegistrationPage({super.key});
-  signUp() {}
+  signUp() {} //TODO
 
   @override
   Widget build(BuildContext context) {
