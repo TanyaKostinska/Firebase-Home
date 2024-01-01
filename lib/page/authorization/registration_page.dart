@@ -13,7 +13,6 @@ class RegistrationPage extends StatelessWidget {
       TextEditingController();
 
   RegistrationPage({super.key});
-
   signUp() {}
 
   @override
