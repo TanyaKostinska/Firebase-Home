@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "353161705318",
+    "project_id": "fir-home-9d353",
+    "storage_bucket": "fir-home-9d353.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353161705318:android:1811162fbeed3ce7c9faa7",
+        "android_client_info": {
+          "package_name": "com.example.firebase_home"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUzKnLgIBQ8aMn2Sqy6grqvocAtUSoEsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
