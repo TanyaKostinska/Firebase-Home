@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_home/page/authorization/login_&_reg.dart';
 import 'package:firebase_home/page/authorization/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      // home: LoginPage(),
+      home: const LoginOrRegistration(),
     );
   }
 }

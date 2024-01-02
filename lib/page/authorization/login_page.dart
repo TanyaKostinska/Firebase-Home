@@ -6,11 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatelessWidget {
+  final void Function()? onTap;
   final AuthService _authService = AuthService();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  LoginPage({super.key});
+  LoginPage({super.key, required this.onTap});
 
   void signIn(context) async {
     try {
@@ -57,12 +58,14 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 SimpleTextField(
+                  icon: const Icon (Icons.email),
                   controller: emailController,
                   label: 'Email',
                   hintText: 'Your email',
                 ),
                 const SizedBox(height: 10),
                 SimpleTextField(
+                  icon: const Icon (Icons.password),
                   controller: passwordController,
                   label: 'Password',
                   hintText: 'Your password',
@@ -77,12 +80,13 @@ class LoginPage extends StatelessWidget {
                   children: [
                     const Text('No account?'),
                     TextButton(
-                      onPressed: () {
+                      onPressed: onTap,
+                        /*() {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => RegistrationPage()));
-                      },
+                      },*/
                       child: const Text(
                         'Register now',
                         style: TextStyle(
