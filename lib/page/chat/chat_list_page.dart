@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class ChatListPage extends StatelessWidget {
   final AuthService _authService = AuthService();
 
-   ChatListPage({super.key});
+  ChatListPage({super.key});
 
-  void logout () {
+  void logout() {
     _authService.singOut();
   }
 

@@ -78,7 +78,7 @@ class RegistrationPage extends StatelessWidget {
                 icon: const Icon (Icons.password),
                 controller: passwordConfirmController,
                 label: 'Repeat Password',
-                hintText: 'Confirm your password',
+                hintText: 'Repeat your password',
               ),
               const SizedBox(height: 20),
               SimpleButton(
