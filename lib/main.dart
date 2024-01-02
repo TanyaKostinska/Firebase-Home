@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_home/page/authorization/login_&_reg.dart';
 import 'package:firebase_home/page/authorization/login_page.dart';
+import 'package:firebase_home/service/auth/intro_page.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       // home: LoginPage(),
-      home: const LoginOrRegistration(),
+      home: IntroPage(),
     );
   }
 }
