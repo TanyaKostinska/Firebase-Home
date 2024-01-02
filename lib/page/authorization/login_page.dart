@@ -1,15 +1,16 @@
-import 'package:firebase_home/page/authorization/registration_page.dart';
 import 'package:firebase_home/page/widget/simple_button.dart';
 import 'package:firebase_home/page/widget/simple_text_field.dart';
 import 'package:firebase_home/service/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import '../chat/chat_list_page.dart';
+
 class LoginPage extends StatelessWidget {
   final void Function()? onTap;
   final AuthService _authService = AuthService();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController(text:'test@test.com');
+  final TextEditingController passwordController = TextEditingController(text: 'Qa123!');
 
   LoginPage({super.key, required this.onTap});
 
@@ -19,6 +20,7 @@ class LoginPage extends StatelessWidget {
         email: emailController.text,
         password: passwordController.text,
       );
+      Navigator.push(context, MaterialPageRoute(builder: (context) => ChatListPage(),),);
     } catch (error) {
       showError(error.toString(), context);
     }
