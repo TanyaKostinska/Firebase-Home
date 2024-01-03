@@ -10,7 +10,7 @@ class LoginPage extends StatelessWidget {
   final void Function()? onTap;
   final AuthService _authService = AuthService();
   final TextEditingController emailController = TextEditingController(text:'admin@admin.com');
-  final TextEditingController passwordController = TextEditingController(text: 'admin');
+  final TextEditingController passwordController = TextEditingController(text: 'admin123');
 
   LoginPage({super.key, required this.onTap});
 
@@ -20,7 +20,9 @@ class LoginPage extends StatelessWidget {
         email: emailController.text,
         password: passwordController.text,
       );
-      Navigator.push(context, MaterialPageRoute(builder: (context) => ChatListPage(),),);
+       Navigator.push(context, MaterialPageRoute(builder: (context) => ChatListPage(),
+        ),
+      );
     } catch (error) {
       showError(error.toString(), context);
     }
@@ -43,7 +45,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: SafeArea(
+        child: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(20.0),
@@ -104,6 +107,7 @@ class LoginPage extends StatelessWidget {
           ),
         ],
       ),
+     ),
     );
   }
 }

@@ -1,11 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_home/page/chat/chat_list_page.dart';
 import 'package:firebase_home/service/chat/chat_service.dart';
 import 'package:flutter/material.dart';
 
 class ChatRoomPage extends StatefulWidget {
   final String receivedUserId;
   final String receivedUserEmail;
-  const ChatRoomPage({
+   const ChatRoomPage({
     super.key, required this.receivedUserId, required this.receivedUserEmail,
   });
 
