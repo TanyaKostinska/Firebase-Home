@@ -1,4 +1,4 @@
-import 'package:firebase_home/page/authorization/login_page.dart';
+
 import 'package:firebase_home/page/widget/simple_button.dart';
 import 'package:firebase_home/page/widget/simple_text_field.dart';
 import 'package:firebase_home/service/auth/auth_service.dart';
