@@ -43,6 +43,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       backgroundColor: const Color(0xFF0D1C00),
       body: ListView(
         children: [
           Padding(
@@ -52,22 +53,25 @@ class LoginPage extends StatelessWidget {
               children: [
                 Lottie.asset('assets/animation/suprise_box.json'),
                 const Text(
-                  'Registration',
+                  'Login',
                   style: TextStyle(
                       fontFamily: 'Rubik',
                       fontSize: 30,
                       fontWeight: FontWeight.w700),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
+
                 SimpleTextField(
-                  icon: const Icon (Icons.email),
+                  icon: const Icon (Icons.email_outlined),
                   controller: emailController,
                   label: 'Email',
                   hintText: 'Your email',
                 ),
+
                 const SizedBox(height: 10),
+
                 SimpleTextField(
-                  icon: const Icon (Icons.password),
+                  icon: const Icon (Icons.password_sharp),
                   controller: passwordController,
                   label: 'Password',
                   hintText: 'Your password',
