@@ -1,16 +1,18 @@
-import 'package:firebase_home/page/authorization/registration_page.dart';
 import 'package:firebase_home/page/widget/simple_button.dart';
 import 'package:firebase_home/page/widget/simple_text_field.dart';
 import 'package:firebase_home/service/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class LoginPage extends StatelessWidget {
-  final AuthService _authService = AuthService();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+import '../chat/chat_list_page.dart';
 
-  LoginPage({super.key});
+class LoginPage extends StatelessWidget {
+  final void Function()? onTap;
+  final AuthService _authService = AuthService();
+  final TextEditingController emailController = TextEditingController(text:'admin@admin.com');
+  final TextEditingController passwordController = TextEditingController(text: 'admin');
+
+  LoginPage({super.key, required this.onTap});
 
   void signIn(context) async {
     try {
@@ -18,6 +20,7 @@ class LoginPage extends StatelessWidget {
         email: emailController.text,
         password: passwordController.text,
       );
+      Navigator.push(context, MaterialPageRoute(builder: (context) => ChatListPage(),),);
     } catch (error) {
       showError(error.toString(), context);
     }
@@ -57,12 +60,14 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 SimpleTextField(
+                  icon: const Icon (Icons.email),
                   controller: emailController,
                   label: 'Email',
                   hintText: 'Your email',
                 ),
                 const SizedBox(height: 10),
                 SimpleTextField(
+                  icon: const Icon (Icons.password),
                   controller: passwordController,
                   label: 'Password',
                   hintText: 'Your password',
@@ -77,12 +82,13 @@ class LoginPage extends StatelessWidget {
                   children: [
                     const Text('No account?'),
                     TextButton(
-                      onPressed: () {
+                      onPressed: onTap,
+                        /*() {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => RegistrationPage()));
-                      },
+                      },*/
                       child: const Text(
                         'Register now',
                         style: TextStyle(
