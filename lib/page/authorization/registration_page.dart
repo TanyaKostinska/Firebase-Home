@@ -44,6 +44,7 @@ class RegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF0D1C00),
       body: ListView(
         children: [
           Padding(
@@ -53,7 +54,7 @@ class RegistrationPage extends StatelessWidget {
             children: [
               Lottie.asset('assets/animation/suprise_box.json'),
               const Text(
-                'Registration now',
+                'Registration',
                 style: TextStyle(
                     fontFamily: 'Rubik',
                     fontSize: 30,

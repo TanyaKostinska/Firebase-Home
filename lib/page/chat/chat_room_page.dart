@@ -35,6 +35,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
             widget.receivedUserEmail,
           style: const TextStyle(
             fontWeight: FontWeight.w600,
+            fontSize: 12
           ),
         ),
         backgroundColor: Colors.blueGrey,
