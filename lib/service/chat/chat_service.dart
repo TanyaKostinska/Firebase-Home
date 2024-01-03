@@ -17,7 +17,7 @@ class ChatService {
       receivedId: receivedId,
       message: message,
       timestamp: timestamp,
-    );
+     );
 
     List<String> ids = [currentUserId, receivedId];
 
@@ -29,7 +29,7 @@ class ChatService {
         .doc(chatRoomId)
         .collection('messages')
         .add(newMessage.toMap());
-  }
+   }
 
   Stream<QuerySnapshot> getMessage({required String userId, required String otherUserId}){
     List<String> ids = [userId, otherUserId];
@@ -45,6 +45,6 @@ class ChatService {
         .orderBy('timestamp', descending: false)
         .snapshots();
 
-  }
+   }
 
-}
+ }
