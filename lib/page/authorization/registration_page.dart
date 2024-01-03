@@ -31,7 +31,7 @@ class RegistrationPage extends StatelessWidget {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          error ?? '',
+          error,
           style: const TextStyle(
             color: Colors.grey,
             fontFamily: 'Rubik',
