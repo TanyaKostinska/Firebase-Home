@@ -35,7 +35,7 @@ class AuthService {
 //    });
   //TODO
 
-  }
+   }
 
   Future<UserCredential> signUpWithEmail({required String email, required String password}) async {
     try {
