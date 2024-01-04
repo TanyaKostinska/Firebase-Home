@@ -55,7 +55,11 @@ class ChatListPage extends StatelessWidget {
                 return ListTile(
                   onTap: (){
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => const ChatRoomPage(receivedUserId: '', receivedUserEmail: '',))
+                        context, MaterialPageRoute(builder: (context) =>  ChatRoomPage(
+                      receivedUserId: user['uid'],
+                      receivedUserEmail: user['email'],
+                    ),
+                    ),
                     );
                   },
                   leading: const CircleAvatar(
