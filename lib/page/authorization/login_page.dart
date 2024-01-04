@@ -9,8 +9,8 @@ import '../chat/chat_list_page.dart';
 class LoginPage extends StatelessWidget {
   final void Function()? onTap;
   final AuthService _authService = AuthService();
-  final TextEditingController emailController = TextEditingController(text:'admin@admin.com');
-  final TextEditingController passwordController = TextEditingController(text: 'admin123');
+  final TextEditingController emailController = TextEditingController(text:'');
+  final TextEditingController passwordController = TextEditingController(text: '');
 
   LoginPage({super.key, required this.onTap});
 
